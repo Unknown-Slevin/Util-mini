@@ -76,6 +76,10 @@ class MyApp(QWidget):
 
         self.setLayout(layout)
 
+        # тут вызывать функцию конфиг
+        # config = твой клас конфига
+
+
     def choose_file(self):
         options = QFileDialog.Options()
         file_path, _ = QFileDialog.getOpenFileName(self, "Выберите файл", "", "All Files (*);;Text Files (*.txt)",
@@ -83,6 +87,7 @@ class MyApp(QWidget):
         if file_path:
             self.file_button.setText(file_path)  # Изменяем текст кнопки на путь к файлу
             self.output_text.append(f'Выбранный файл: {file_path}')
+            print('выбран файл')
 
     def load_function(self):
         # Здесь разместите код для загрузки
@@ -91,7 +96,8 @@ class MyApp(QWidget):
         self.output_text.append(' '.join([hex(b)[2:].zfill(2).upper() for b in data]))
 
     def unload_function(self):
-        # Здесь разместите код для выгрузки
+        # тут прочитать еплан
+        # если все гуд записать в контроллер используя настройки ком порта
         self.output_text.append('Выгрузка...')
 
     def clear_function(self):
