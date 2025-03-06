@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QPushButton,
-    QFileDialog, QComboBox, QLabel, QTextEdit,
+    QFileDialog, QComboBox, QLabel, QTextEdit)
 
 class MYWidget(QWidget):
     def __init__(self):
@@ -8,4 +8,4 @@ class MYWidget(QWidget):
         self.initUI()
 
     def initUI(self):
-        
+        pass
